@@ -49,8 +49,8 @@ namespace BreakoutGameLab001
         private void Timer_Tick(object sender, EventArgs e)
         {
             // 定時移動球的位置, 檢查碰撞事件
-            // ball.Move( Width, Height);
-            // ball.CheckCollision(paddle, bricks);
+            ball.Move( Width, Height);
+            ball.CheckCollision(paddle, bricks);
 
             // 重繪遊戲畫面
             Invalidate(); // --> 觸發 OnPaint 事件
@@ -66,8 +66,8 @@ namespace BreakoutGameLab001
             Graphics gr = e.Graphics;
 
             // 繪製球、擋板
-            // ball.Draw(gr);
-            // paddle.Draw(gr);
+            ball.Draw(gr);
+            paddle.Draw(gr);
 
             // 繪製磚塊
             for (int i = 0; i < 3; i++)
@@ -76,7 +76,7 @@ namespace BreakoutGameLab001
                 {
                     if (bricks[i, j] != null)
                     {
-                        // bricks[i, j].Draw(gr);
+                        bricks[i, j].Draw(gr);
                     }
                 }
             }
@@ -85,12 +85,12 @@ namespace BreakoutGameLab001
         //
         public void paddleMoveLeft()
         {
-            // paddle.MoveLeft();
+            paddle.Move(-10, Width);
         }
 
         public void paddleMoveRight()
         {
-            // paddle.MoveRight();
+            paddle.Move( 10,  Width);
         }
     }
 }

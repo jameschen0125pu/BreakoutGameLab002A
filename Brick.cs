@@ -28,6 +28,11 @@ namespace BreakoutGameLab001
         // 加入其他方法
 
         // 繪製磚塊
-
+        public void Draw(Graphics g)
+        {
+            // TODO - 繪製磚塊
+            g.FillRectangle(new SolidBrush(Color), X, Y, Width, Height);
+            g.DrawRectangle(new Pen(Color.Black, 2), X, Y, Width, Height);
+        }
     }
 }

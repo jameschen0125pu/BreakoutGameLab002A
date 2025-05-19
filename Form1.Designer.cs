@@ -77,6 +77,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Breakout Game, by James Chen (S1125566)";
+            KeyDown += Form1_KeyDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
